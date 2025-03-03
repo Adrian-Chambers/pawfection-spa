@@ -7,7 +7,7 @@ export const products: Product[] = [
     description: 'Our own gentle, moisturizing formula for all coat types. Leaves fur soft and shiny.',
     price: 18.99,
     category: 'shampoo',
-    image: '/images/products/signature-shampoo.jpg',
+    image: '/images/products/signature-shampoo.png',
     isSignature: true,
     inStock: true
   },
@@ -17,7 +17,7 @@ export const products: Product[] = [
     description: 'Perfect for dogs with sensitive skin or allergies. Reduces itching and irritation.',
     price: 21.99,
     category: 'shampoo',
-    image: '/images/products/oatmeal-shampoo.jpg',
+    image: '/images/products/oatmeal-shampoo.png',
     isSignature: true,
     inStock: true
   },
@@ -27,7 +27,7 @@ export const products: Product[] = [
     description: 'Reduces shedding by up to 80%. Recommended for double-coated breeds.',
     price: 24.99,
     category: 'shampoo',
-    image: '/images/products/deshedding-shampoo.jpg',
+    image: '/images/products/deshedding-shampoo.png',
     isSignature: true,
     inStock: true
   },
@@ -37,7 +37,7 @@ export const products: Product[] = [
     description: 'Deep conditioning treatment that detangles and nourishes the coat.',
     price: 19.99,
     category: 'conditioner',
-    image: '/images/products/conditioner.jpg',
+    image: '/images/products/conditioner.png',
     isSignature: true,
     inStock: true
   },
