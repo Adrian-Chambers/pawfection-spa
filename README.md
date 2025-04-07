@@ -29,18 +29,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-## Deployment
-
-This project is configured for easy deployment on Vercel:
-
-1. Push your changes to GitHub
-2. Connect your repository to Vercel
-3. Vercel will automatically build and deploy your application
-
-## Portfolio Context
-
-This is a fictional business created for portfolio purposes. The design, functionality, and content were created to demonstrate web development skills and is not associated with any real business.
-
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
