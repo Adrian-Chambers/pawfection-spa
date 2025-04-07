@@ -2,13 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'pawfection-spa.com',
-        pathname: '**',
-      },
-    ],
     formats: ['image/avif', 'image/webp'],
   },
   async headers() {

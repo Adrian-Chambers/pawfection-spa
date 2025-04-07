@@ -19,29 +19,29 @@ const fredoka = Fredoka({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://pawfection-spa.com'),
-  title: 'Pawfection Grooming & Spa - Premium Dog Grooming Services',
-  description: 'Professional dog grooming and spa services that your furry friend deserves. Offering grooming packages, special treatments, and premium products.',
-  keywords: 'dog grooming, pet spa, dog salon, pet grooming, dog care, pet care, dog services, pet services',
-  authors: [{ name: 'Pawfection Grooming & Spa' }],
-  creator: 'Pawfection Grooming & Spa',
-  publisher: 'Pawfection Grooming & Spa',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://pawfection-spa.vercel.app'),
+  title: 'Pawfection Grooming & Spa - Portfolio Project',
+  description: 'A concept project showcasing a fictional dog grooming and spa service website built with Next.js and React.',
+  keywords: 'portfolio, next.js, react, web development, frontend development, dog grooming website, pet spa UI',
+  authors: [{ name: 'Your Name' }],
+  creator: 'Your Name',
+  publisher: 'Your Name',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: 'Pawfection Grooming & Spa - Premium Dog Grooming Services',
-    description: 'Professional dog grooming and spa services that your furry friend deserves. Offering grooming packages, special treatments, and premium products.',
+    title: 'Pawfection Grooming & Spa - Portfolio Project',
+    description: 'A portfolio project showcasing a fictional dog grooming and spa service website built with Next.js and React.',
     url: '/',
-    siteName: 'Pawfection Grooming & Spa',
+    siteName: 'Pawfection Spa - Portfolio',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Pawfection Grooming & Spa - Premium Dog Grooming Services',
+        alt: 'Pawfection Spa - Portfolio Project Preview',
       },
     ],
     locale: 'en_US',
@@ -49,8 +49,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pawfection Grooming & Spa - Premium Dog Grooming Services',
-    description: 'Professional dog grooming and spa services that your furry friend deserves.',
+    title: 'Pawfection Spa - Portfolio Project',
+    description: 'Frontend development portfolio project showing UI/UX skills.',
     images: ['/images/twitter-image.jpg'],
   },
   robots: {
@@ -65,7 +65,8 @@ export const metadata = {
     },
   },
   verification: {
-    google: 'your-google-site-verification',
+    // Remove this if you don't need Google verification
+    // google: 'your-google-site-verification',
   },
 };
 

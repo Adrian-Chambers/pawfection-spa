@@ -1,17 +1,51 @@
-# Pawfection Grooming & Spa
+# Pawfection Spa - Concept Project
 
-## Setup
+A concept project for a dog grooming and spa business website, built with Next.js and React. 
 
-`npm install`
+## Technologies Used
 
-`npm run build`
+- **Next.js 14** with App Router
+- **React 18** with Hooks
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- **Context API** for state management
 
-`npm start`
+## Getting Started
 
-### Image Sources
+```bash
+# Clone the repository
+git clone https://github.com/adrian-chambers/pawfection-spa.git
 
-Logos and icons: Flaticon
-- https://www.flaticon.com/packs/pet-grooming-11
+# Navigate to the project directory
+cd pawfection-spa
 
-Images: Pexels
-- https://www.pexels.com/collections/dogs-nhoszqv/
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+## Deployment
+
+This project is configured for easy deployment on Vercel:
+
+1. Push your changes to GitHub
+2. Connect your repository to Vercel
+3. Vercel will automatically build and deploy your application
+
+## Portfolio Context
+
+This is a fictional business created for portfolio purposes. The design, functionality, and content were created to demonstrate web development skills and is not associated with any real business.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Contact
+
+LinkedIn: [https://linkedin.com/in/adrian-chambers](https://linkedin.com/in/adrian-chambers)
+GitHub: [https://github.com/adrian-chambers](https://github.com/adrian-chambers)
