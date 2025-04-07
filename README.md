@@ -36,4 +36,5 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Contact
 
 LinkedIn: [https://linkedin.com/in/adrian-chambers](https://linkedin.com/in/adrian-chambers)
+
 GitHub: [https://github.com/adrian-chambers](https://github.com/adrian-chambers)
