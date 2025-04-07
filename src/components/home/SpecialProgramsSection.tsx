@@ -23,9 +23,9 @@ const SpecialProgramsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 auto-rows-fr">
           {programs.map((program, index) => (
-            <div key={program.id} className="program-card-wrapper">
+            <div key={program.id} className="program-card-wrapper h-full">
               {/* Use a wrapper div to apply the entry animation */}
               <div 
                 style={isHydrated ? {
@@ -36,14 +36,15 @@ const SpecialProgramsSection = () => {
                 } : {
                   opacity: 1
                 }}
+                className="h-full"
               >
                 {/* Use motion.div without inline styles for the hover animation */}
                 <motion.div
                   whileHover={{ y: -5 }}
-                  transition={{ duration: 0.2 }} // Match Card component speed
-                  className="bg-white rounded-2xl overflow-hidden shadow-md border-2 border-primary-light h-full"
+                  transition={{ duration: 0.2 }}
+                  className="bg-white rounded-2xl overflow-hidden shadow-md border-2 border-primary-light h-full flex flex-col"
                 >
-                  <div className="relative h-48">
+                  <div className="relative h-48 flex-shrink-0">
                     <Image
                       src={program.image}
                       alt={program.name}
@@ -62,11 +63,11 @@ const SpecialProgramsSection = () => {
                       </div>
                     )}
                   </div>
-                  <div className="p-6 pt-8">
+                  <div className="p-6 pt-8 flex flex-col flex-grow">
                     <h3 className="text-xl font-display text-fur-brown mb-2">
                       {program.name}
                     </h3>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-600 mb-4 line-clamp-2">
                       {program.description}
                     </p>
                     {program.price && (
@@ -74,15 +75,15 @@ const SpecialProgramsSection = () => {
                         {program.price}
                       </p>
                     )}
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-6 flex-grow">
                       {program.features.slice(0, 3).map((feature, i) => (
                         <li key={i} className="flex items-start">
                           <FiCheck className="text-secondary-dark mt-1 mr-2 flex-shrink-0" />
-                          <span>{feature}</span>
+                          <span className="line-clamp-1">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <div className="flex space-x-4">
+                    <div className="flex space-x-4 mt-auto">
                       <Link 
                         href={`/programs#${program.slug}`}
                         className="w-full"

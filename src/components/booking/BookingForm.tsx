@@ -16,6 +16,19 @@ import { formatPrice } from '@/utils/price';
 // Filter to get only the a la carte services
 const additionalServices = services.filter(service => service.category === 'alaCarte');
 
+// Size data with weight ranges
+const sizeData = [
+  { value: 'small', label: 'Small', weight: 'Up to 20 lbs' },
+  { value: 'medium', label: 'Medium', weight: '21-50 lbs' },
+  { value: 'large', label: 'Large', weight: '51+ lbs' }
+];
+
+// Function to get weight range by size
+const getWeightRangeBySize = (size: string): string => {
+  const sizeInfo = sizeData.find(s => s.value === size);
+  return sizeInfo ? sizeInfo.weight : '';
+};
+
 // Common input field component
 const FormField = ({ 
   id, 
@@ -328,24 +341,24 @@ const BookingForm = () => {
               <div>
                 <label htmlFor="petSize" className="block text-gray-700 mb-1">Pet Size</label>
                 <div className="flex space-x-2">
-                  {(['small', 'medium', 'large'] as const).map((size) => (
+                  {sizeData.map((size) => (
                     <button
-                      key={size}
+                      key={size.value}
                       type="button"
-                      onClick={() => updateField('size', size)}
-                      className={`flex-1 py-2 rounded-lg transition-all ${
-                        formData.size === size
+                      onClick={() => updateField('size', size.value)}
+                      className={`flex-1 py-2 px-1 rounded-lg transition-all ${
+                        formData.size === size.value
                           ? 'bg-secondary text-secondary-dark font-medium ring-2 ring-secondary'
                           : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
                       }`}
                     >
-                      {size.charAt(0).toUpperCase() + size.slice(1)}
+                      <div className="flex flex-col items-center">
+                        <span>{size.label}</span>
+                        <span className="text-xs mt-0.5">{size.weight}</span>
+                      </div>
                     </button>
                   ))}
                 </div>
-                <p className="mt-1 text-xs text-gray-500">
-                  Small: up to 20 lbs | Medium: 21-50 lbs | Large: 51+ lbs
-                </p>
               </div>
               
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -580,7 +593,9 @@ const BookingForm = () => {
                 
                 <div className="flex justify-between">
                   <span className="text-gray-500">Pet Size:</span>
-                  <span className="font-medium capitalize">{formData.size}</span>
+                  <span className="font-medium capitalize">
+                    {formData.size} ({getWeightRangeBySize(formData.size)})
+                  </span>
                 </div>
                 
                 {formData.breed && (

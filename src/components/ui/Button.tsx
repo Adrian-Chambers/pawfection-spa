@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
   const variantStyles = {
     primary: 'bg-primary-dark text-white hover:bg-primary hover:text-primary-dark',
     secondary: 'bg-secondary-dark text-white hover:bg-secondary hover:text-secondary-dark',
-    accent: 'bg-accent text-fur-brown hover:bg-yellow-300',
+    accent: 'bg-accent text-fur-brown hover:bg-yellow-300 shadow-lg border border-yellow-400',
   };
   
   const sizeStyles = {

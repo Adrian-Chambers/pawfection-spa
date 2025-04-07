@@ -29,7 +29,7 @@ const PawPrintDivider: React.FC<PawPrintDividerProps> = ({
   const PawPrint: React.FC<{ size: number }> = ({ size }) => {
     return (
       <svg
-        width={size}
+        width={size + 6}
         height={size}
         viewBox="0 0 512 512"
         fill="currentColor"

@@ -24,44 +24,13 @@ export default function BookAppointmentPage() {
         </div>
       </div>
       
-      <PawPrintDivider color="text-secondary" />
-      
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <div className="text-secondary-dark mb-4">
-              <FiCalendar size={28} />
-            </div>
-            <h3 className="text-lg font-display text-fur-brown mb-2">Flexible Scheduling</h3>
-            <p className="text-gray-600">
-              Choose from our available time slots to find what works best for you and your pet.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <div className="text-secondary-dark mb-4">
-              <FiClipboard size={28} />
-            </div>
-            <h3 className="text-lg font-display text-fur-brown mb-2">Customized Services</h3>
-            <p className="text-gray-600">
-              Select the perfect grooming package and add any additional services your pet needs.
-            </p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-            <div className="text-secondary-dark mb-4">
-              <FiSmile size={28} />
-            </div>
-            <h3 className="text-lg font-display text-fur-brown mb-2">Stress-Free Experience</h3>
-            <p className="text-gray-600">
-              Our booking process is simple, and our groomers are experts at making pets comfortable.
-            </p>
-          </div>
-        </div>
         
         <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg border-2 border-secondary-light">
           <BookingForm />
         </div>
+
+        <PawPrintDivider color="text-secondary" />
         
         <div className="mt-12 bg-gray-50 max-w-3xl mx-auto p-6 rounded-lg">
           <h3 className="text-lg font-display text-fur-brown mb-4">Booking Policies</h3>

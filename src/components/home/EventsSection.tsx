@@ -23,9 +23,9 @@ const EventsSection = () => {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-fr">
         {upcomingEvents.map((event, index) => (
-          <div key={event.id} className="event-card-wrapper">
+          <div key={event.id} className="event-card-wrapper h-full">
             {/* Use a wrapper div to apply the entry animation */}
             <div
               style={isHydrated ? {
@@ -36,14 +36,15 @@ const EventsSection = () => {
               } : {
                 opacity: 1
               }}
+              className="h-full"
             >
               {/* Use motion.div without inline styles for the hover animation */}
               <motion.div
                 whileHover={{ y: -5 }}
-                transition={{ duration: 0.2 }} // Match Card component speed
-                className="bg-white rounded-2xl overflow-hidden shadow-md border-2 border-secondary-light hover:border-secondary h-full"
+                transition={{ duration: 0.2 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-md border-2 border-secondary-light hover:border-secondary h-full flex flex-col"
               >
-                <div className="relative h-48">
+                <div className="relative h-48 flex-shrink-0">
                   <Image
                     src={event.image}
                     alt={event.title}
@@ -65,32 +66,32 @@ const EventsSection = () => {
                     </div>
                   )}
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-display text-fur-brown mb-2">
                     {event.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4 line-clamp-2">
                     {event.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-6 flex-grow">
                     <div className="flex items-center text-gray-500">
-                      <FiCalendar className="mr-2" />
-                      <span>{event.date}</span>
+                      <FiCalendar className="mr-2 flex-shrink-0" />
+                      <span className="line-clamp-1">{event.date}</span>
                     </div>
                     <div className="flex items-center text-gray-500">
-                      <FiClock className="mr-2" />
-                      <span>{event.time}</span>
+                      <FiClock className="mr-2 flex-shrink-0" />
+                      <span className="line-clamp-1">{event.time}</span>
                     </div>
                     <div className="flex items-center text-gray-500">
-                      <FiMapPin className="mr-2" />
-                      <span>At our store</span>
+                      <FiMapPin className="mr-2 flex-shrink-0" />
+                      <span className="line-clamp-1">At our store</span>
                     </div>
                   </div>
                   
                   <Button
                     variant="secondary"
-                    className="w-full"
+                    className="w-full mt-auto"
                     href={`#event-${event.id}`}
                   >
                     RSVP
